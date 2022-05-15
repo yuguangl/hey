@@ -15,16 +15,25 @@ public class playertest2 extends JFrame{
         height = h;
         contentPane = this.getContentPane();
         text = new JTextArea();
-        b1 = new JButton("press");
     }
     public void makeGUI(){
+        //frame.
         JFrame frame = new JFrame("test");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JButton b1 = new JButton("press");
+
+        frame.setSize(width, height);
+
+        text.setText("A MAN HAS FALLEN INTO THE RIVER!");
+        text.setWrapStyleWord(true);
+        text.setLineWrap(true);
+        text.setEditable(false);
 
         SpringLayout layout = new SpringLayout();
         frame.setLayout(layout);
 
-        contentPane.add(b1);
+        b1.setBounds(350,50,100,100);
+        frame.add(b1);
 
         frame.setVisible(true);
     }
